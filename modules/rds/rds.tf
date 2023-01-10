@@ -1,11 +1,11 @@
-resource "aws_db_instance" "demo_terraform" {
-  db_name = "demo_terraform_sql"
+resource "aws_db_instance" "rds" {
+  db_name = "access_db_public_allIPv4"
   allocated_storage = "5"
   engine = "mysql"
   engine_version = "8.0.28"
   instance_class = "db.t3.micro"
-  username = "${var.username}"
-  password = "${var.password}"
+  username = var.username
+  password = var.password
   skip_final_snapshot  = true
   ### security groups
   db_subnet_group_name = aws_db_subnet_group.setup_iam_auth_database.id
