@@ -10,9 +10,13 @@ provider "aws" {
 #   region = var.region
 # }
 
-module "ecs" {
-  source = "./modules/ecs"
-  region = var.region
+# module "ecs" {
+#   source = "./modules/ecs"
+#   region = var.region
+# }
+
+module "rds" {
+  source = "./modules/rds"
 }
 
 # module "aws_s3" {
