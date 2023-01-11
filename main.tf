@@ -1,6 +1,5 @@
 provider "aws" {
-  # project = "init-terraform"
-  # shared_credentials_files = ["/home/nqhung6/.aws/credentials"]
+  # project = "Practice terraform!"
   profile = "nqhung"
   region = var.region
 }
@@ -17,6 +16,10 @@ provider "aws" {
 
 module "rds" {
   source = "./modules/rds"
+  owner = var.owner
+  username = var.username
+  password = var.password
+  # terraform plan -var-file=credentails.tfvars
 }
 
 # module "aws_s3" {
