@@ -3,13 +3,13 @@ variable "region" {
   default = "us-west-1"
 }
 
-variable "username" {
-  type = string
-}
+# variable "username" {
+#   type = string
+# }
 
-variable "password" {
-  type = string
-}
+# variable "password" {
+#   type = string
+# }
 
 variable "owner" {
   type = string
