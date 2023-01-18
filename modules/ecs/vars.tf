@@ -36,3 +36,16 @@ variable "ecs_service" {
     "desired_tasks" = 1
   }
 }
+
+#############################
+#       ECR REPOSITY
+#############################
+
+variable "ecr_repository" {
+  type = map(string)
+  default = {
+    "image_tag_mutability" = "MUTABLE",
+    "image_scanning_configuration" = "false",
+    "encryption_type" = "AES256"
+  }
+}
